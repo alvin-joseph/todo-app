@@ -6,11 +6,12 @@
 body {
   background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
   color: white;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Gloria Hallelujah', cursive;
   min-height: 100vh;
 }
 header {
   font-size: 2rem;
+  text-align: center;
 }
 
 header,
@@ -96,6 +97,19 @@ form button:hover {
   opacity: 0.5;
 }
 
+.name-form {
+  min-height: 2vh;
+  margin-bottom: 3rem;
+}
+
+.name-input {
+  font-size: 1.5rem;
+}
+
+.name-button {
+  padding: .22rem;
+}
+
 /*CUSTOM SELECTOR */
 select {
   -webkit-appearance: none;
@@ -126,14 +140,63 @@ select {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 1rem;
+  padding: .8rem;
   background: #ff6f47;
   cursor: pointer;
   pointer-events: none;
 }
-/* Transition */
-/*
-.select:hover::after {
-  transform: scale(1.5);
+
+/* Media Queries */
+@media screen and (max-width:540px){
+  header {
+    font-size: 1.4rem;
+  }
+  form input {
+    width: 40%;
+  }
 }
-*/
+@media screen and (max-width:414px){
+  header {
+    font-size: 1.2rem;
+  }
+  .select {
+    width: 35%;
+  }
+  .select::after {
+    padding: .5rem .4rem 1.5rem .4rem;
+  }
+  .todo {
+    font-size: 1rem;
+  }
+  .trash-btn,
+  .complete-btn {
+    padding: .8rem;
+  }
+  form {
+    margin-left: 4%;
+  }
+}
+@media screen and (max-width:360px){
+  header {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width:320px){
+  header {
+    font-size: .9rem;
+  }
+  form input {
+    width: 50%;
+  }
+  .select {
+    width: 37%;
+  }
+}
+@media screen and (max-width:280px){
+  header {
+    font-size: .8rem;
+  }
+  .name-input {
+    width: 60%;
+  }
+}
